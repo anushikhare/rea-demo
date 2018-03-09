@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { PropertListingModule } from './property-listing/property-listing.module';
+import { PropertyListingModule } from './property-listing/property-listing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { PropertListingModule } from './property-listing/property-listing.module
   imports: [
     BrowserModule,
     SharedModule,
-    PropertListingModule
+    PropertyListingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

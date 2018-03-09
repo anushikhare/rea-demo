@@ -1,9 +1,13 @@
-<div class="property-card">
-  <div class="text-center">
-    {{property.id}}
-  </div>
-  <div>
-    <i class="fas fa-home"></i>
-    <button class="btn btn-success">{{buttonText}}</button>
+<div class="row">
+  <div class="col-md-6">
+    <div class="property-card">
+      <div class="text-center">
+        {{property.id}}
+      </div>
+      <div>
+        <i class="fa fa-home"></i>
+        <button class="btn btn-success" (click)="addOrRemoveProperty.emit(property.id)">{{buttonText}}</button>
+      </div>
+    </div>
   </div>
 </div>

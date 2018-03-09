@@ -9,6 +9,9 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     SharedModule
+  ],
+  exports: [
+    ResultPropertiesComponent
   ]
 })
-export class PropertListingModule { }
+export class PropertyListingModule { }

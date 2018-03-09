@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+$icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+// TODO import specific bootstrap stylesheets, excluding unused CSS
+@import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+// ** FONT-AWESOME **
+$fa-font-path: '../node_modules/font-awesome/fonts';
+@import "../node_modules/font-awesome/scss/font-awesome";

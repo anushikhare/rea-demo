@@ -22,4 +22,7 @@ export class ResultPropertiesComponent implements OnInit {
   ngOnInit() {
   }
 
+  addProperty(id: number) {
+    console.log('Property Id: ', id);
+  }
 }
