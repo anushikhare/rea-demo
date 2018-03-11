@@ -1,5 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+export interface ButtonProperties {
+  text: string;
+  class: string;
+}
+
 @Component({
   selector: 'rea-property-card',
   templateUrl: './property-card.component.html',
@@ -8,8 +13,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class PropertyCardComponent implements OnInit {
   @Input() property;
 
-  /* Text on the button i.e; Add property/ Remove property */
-  @Input() buttonText: string;
+  @Input() buttonProperties: ButtonProperties;
 
   @Output() addOrRemoveProperty = new EventEmitter<number>();
 

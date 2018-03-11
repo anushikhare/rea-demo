@@ -1,13 +1,9 @@
-<div class="row">
-  <div class="col-md-6">
-    <div class="property-card">
-      <div class="text-center">
-        {{property.id}}
-      </div>
-      <div>
-        <i class="fa fa-home"></i>
-        <button class="btn btn-success" (click)="addOrRemoveProperty.emit(property.id)">{{buttonText}}</button>
-      </div>
-    </div>
+<div class="property-card" reaCardHover>
+  <div class="property-card__header">
+    {{property.id}}
   </div>
+  <div>
+    <i class="fa fa-home fa-3x home-icon"></i>
+  </div>
+  <button class="btn" [ngClass]="buttonProperties.class" (click)="addOrRemoveProperty.emit(property.id)">{{buttonProperties.text}}</button>
 </div>

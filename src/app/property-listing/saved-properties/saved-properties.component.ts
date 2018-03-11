@@ -1,34 +1,34 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
 import { takeUntil } from 'rxjs/operators';
+import reject from 'lodash-es/reject';
 
 import { ResultsService, PropertyDetail, PropertyResult } from '../results.service';
 import { ButtonProperties } from '../../shared/property-card/property-card.component';
 
 @Component({
-  selector: 'rea-result-properties',
-  templateUrl: './result-properties.component.html'
+  selector: 'rea-saved-properties',
+  templateUrl: './saved-properties.component.html'
 })
-export class ResultPropertiesComponent implements OnInit, OnDestroy {
-
-  private resultProperties: PropertyDetail[];
+export class SavedPropertiesComponent implements OnInit, OnDestroy {
+  private savedProperties: PropertyDetail[];
   private destroy$: Subject<void> = new Subject();
 
   private buttonProperties: ButtonProperties = {
-    text: 'Add Property',
-    class: 'btn-success'
+    text: 'Remove Property',
+    class: 'btn-danger'
   };
 
   constructor(public resultsService: ResultsService) {}
 
   ngOnInit() {
-    this.resultsService.resultProperties$
+    this.resultsService.savedProperties$
       .pipe(
         takeUntil(this.destroy$)
       )
-      .subscribe(resultProperties => {
-        this.resultProperties = resultProperties;
+      .subscribe(savedProperties => {
+        this.savedProperties = savedProperties;
       });
   }
 
@@ -37,7 +37,7 @@ export class ResultPropertiesComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
-  addProperty(id: string) {
-    this.resultsService.addProperty(id);
+  removeProperty(id: string) {
+    this.resultsService.removeProperty(id);
   }
 }

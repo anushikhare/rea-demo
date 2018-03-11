@@ -1,11 +1,11 @@
-<div class="text-center">
-  <h3>Results</h3>
+<div>
+  <h3>Saved Properties</h3>
   <ul class="list-unstyled property-listing">
-    <li *ngFor="let property of resultProperties">
+    <li *ngFor="let property of savedProperties">
       <rea-property-card
         [property]="property"
         [buttonProperties]="buttonProperties"
-        (addOrRemoveProperty)="addProperty($event)"
+        (addOrRemoveProperty)="removeProperty($event)"
       >
       </rea-property-card>
     </li>
