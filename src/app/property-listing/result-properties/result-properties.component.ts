@@ -29,13 +29,6 @@ export class ResultPropertiesComponent implements OnInit, OnDestroy {
   constructor(public resultsService: ResultsService) {}
 
   ngOnInit() {
-    // this.resultsService.resultProperties$
-    //   .pipe(
-    //     takeUntil(this.destroy$)
-    //   )
-    //   .subscribe(resultProperties => {
-    //     this.resultProperties = resultProperties;
-    //   });
     combineLatest(
       this.resultsService.resultProperties$,
       this.resultsService.savedProperties$
