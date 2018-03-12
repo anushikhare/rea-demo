@@ -1,0 +1,12 @@
+<div class="property-detail">
+  <div class="property-detail__header" [ngStyle]="{'background-color': property.agency.brandingColors.primary}">
+    <img class="agency-logo" [src]="property.agency.logo"/>
+  </div>
+  <div class="property-detail__body" [ngStyle]="{'background-image': 'url(' + property.mainImage + ')'}">
+  </div>
+  <div class="property-detail__footer">
+    <span>Price: {{property.price}}</span> 
+  </div>
+</div>
+
+  

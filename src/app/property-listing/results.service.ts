@@ -20,7 +20,7 @@ export interface PropertyDetail {
       primary: string;
     },
     logo: string;
-  }
+  };
 }
 
 @Injectable()
@@ -36,8 +36,7 @@ export class ResultsService {
       .subscribe(results => {
         this.savedProperties$.next(results.saved);
         this.resultProperties$.next(results.results);
-        // this.resultProperties = results.results;
-      })
+      });
   }
 
   getPropertyResults(): Observable<PropertyResult> {
@@ -55,7 +54,6 @@ export class ResultsService {
     .subscribe(([resultProperties, savedProperties]) => {
       const property = find(resultProperties, {id});
       this.savedProperties$.next([...savedProperties, property]);
-      this.resultProperties$.next(reject(resultProperties, {id}));
     });
   }
 
@@ -66,6 +64,6 @@ export class ResultsService {
       )
       .subscribe((savedProperties) => {
         this.savedProperties$.next(reject(savedProperties, {id}));
-      })
+      });
   }
 }

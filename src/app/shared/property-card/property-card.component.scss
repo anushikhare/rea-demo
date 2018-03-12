@@ -2,11 +2,13 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
-  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 15px;
   .home-icon {
-    color: #ddd;
+    color: #757070;
   }
   button {
+    margin-top: 5px;
     display: none;
   }
   &.card-active {
@@ -14,8 +16,13 @@
       display: initial;
     }
   }
-}
 
-.property-card__header {
-  background-color: #ccc;
+  .property-card__header {
+    background-color: #ccc;
+    padding: 5px;
+  }
+
+  .property-card__body {
+    padding: 25px;
+  }
 }

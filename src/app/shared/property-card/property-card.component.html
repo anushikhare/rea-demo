@@ -1,9 +1,14 @@
-<div class="property-card" reaCardHover>
+<div class="property-card" [tooltip]="propertyDetail" placement="right" reaCardHover>
   <div class="property-card__header">
     {{property.id}}
   </div>
-  <div>
-    <i class="fa fa-home fa-3x home-icon"></i>
+  <div class="property-card__body">
+    <div>
+      <i class="fa fa-home fa-3x home-icon"></i>
+    </div>
+    <button *ngIf="showButton" class="btn" [ngClass]="buttonProperties.class" (click)="addOrRemoveProperty.emit(property.id)">{{buttonProperties.text}}</button>
   </div>
-  <button class="btn" [ngClass]="buttonProperties.class" (click)="addOrRemoveProperty.emit(property.id)">{{buttonProperties.text}}</button>
 </div>
+<ng-template #propertyDetail>
+  <rea-property-detail [property]="property"></rea-property-detail>
+</ng-template>

@@ -5,6 +5,7 @@
       <rea-property-card
         [property]="property"
         [buttonProperties]="buttonProperties"
+        [showButton]="!property.isSaved"
         (addOrRemoveProperty)="addProperty($event)"
       >
       </rea-property-card>

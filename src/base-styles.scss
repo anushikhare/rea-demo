@@ -6,3 +6,42 @@
     margin-bottom: 20px;
   }
 }
+
+.tooltip-inner {
+  background-color: #e5e5e5;
+  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, .2);
+  color: #222;
+  font-weight: 400;
+  max-width: 280px;
+  padding: 10px;
+  text-align: left;
+  white-space: normal;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #e5e5e5;
+  border-width: 0 10px 10px;
+  margin-left: -10px;
+  top: -4px
+}
+
+.tooltip.top .tooltip-arrow {
+  border-top-color: #e5e5e5;
+  border-width: 10px 10px 0;
+  bottom: -4px;
+  margin-left: -10px
+}
+
+.tooltip.left .tooltip-arrow {
+  border-left-color: #e5e5e5;
+  border-width: 10px 0 10px 10px;
+  margin-top: -10px;
+  right: -4px
+}
+
+.tooltip.right .tooltip-arrow {
+  border-right-color: #e5e5e5;
+  border-width: 10px 10px 10px 0;
+  left: -4px;
+  margin-top: -10px
+}
