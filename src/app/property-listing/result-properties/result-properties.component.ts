@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import map from 'lodash-es/map';
 import find from 'lodash-es/find';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { combineLatest } from 'rxjs/observable/combineLatest';
+import { combineLatest } from 'rxjs';
 
 import { ResultsService, PropertyDetail, PropertyResult } from '../results.service';
 import { ButtonProperties } from '../../shared/property-card/property-card.component';

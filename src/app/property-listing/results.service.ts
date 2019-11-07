@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { combineLatest } from 'rxjs/observable/combineLatest';
+import { Observable } from 'rxjs';
+import { combineLatest } from 'rxjs';
 import { first, map } from 'rxjs/operators';
-import { ReplaySubject } from 'rxjs/ReplaySubject';
+import { ReplaySubject } from 'rxjs';
 import find from 'lodash-es/find';
 import reject from 'lodash-es/reject';
 
